@@ -32,8 +32,10 @@ class ViewController: UIViewController {
         
         var url: String!
         switch self.title {
-        case "Up Coming"?:
+        case "Popular"?:
             url = NetworkUtils.getMoviesUrl(path: Constants.API_UPCOMING_URL)
+        case "Top Rated"?:
+            url = NetworkUtils.getMoviesUrl(path: Constants.API_TOP_RATED_URL)
         default:
             url = NetworkUtils.getMoviesUrl(path: Constants.API_LATEST_URL)
         }
